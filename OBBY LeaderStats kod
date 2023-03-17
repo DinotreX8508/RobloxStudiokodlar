@@ -1,0 +1,15 @@
+--bunu ServerScriptService ye at ve adını (LeaderStats) olarak yap ve bu yazıyı sil--
+
+game.Players.PlayerAdded:Connect(function(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+	local points = Instance.new("IntValue")
+	points.Name = "Level"
+	points.Parent = leaderstats
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+	-- add code here to save player stats to a data store if desired
+end)
