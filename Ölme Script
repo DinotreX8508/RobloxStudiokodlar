@@ -1,0 +1,12 @@
+--DinotreX--
+--Ölme Script--
+--Bunu ve yukardakileri sil--
+
+function onTouch(otherPart)
+	local humanoid = otherPart.Parent:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
+end
+
+script.Parent.Touched:Connect(onTouch)
